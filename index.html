@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Andrés Cagua Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img  src="img/logo_andres.png">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Mis Servicios</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Acerca de mí</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Mi trabajo</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hola, Mi nombre es <strong>Andrés Cagua</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">front-end dev</p>
+            <img src="img/andres_1.png" alt="a picture of Andrés smiling" class="intro__img">
+        </section>
+        
+        
+        <!-- My services -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">Que hago</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Diseño Web</h3>
+                    <p>En cuanto a diseño web tengo buenos conocimientos de JavaScript, HTML y CSS. Me estoy especializando con el framework Angular, llevo un año trabjando con él, he realizado CRUDs completos con Angular y la base de datos de google Firebase,
+                        elaboré una e-comerce básica y estoy trabajando para que sea más compleja y completa, por último he comenzando a introducirme en el mundo de NodeJs.
+                       </p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>Hardware</h3>
+                    <p>
+                        En área de hardware he realizado varios trabajos con arduino, desde proyectos básicos hasta sistemas de control un poco más complejos utilizando PIDs y Controladores difuzos, he trabajado con matlab y labview comunicandose con arduino. 
+                        He realiazado integraciones de PLCs Siemens con Labview y también con NodeRED, así mismo comunicación de Raspberry, PLC y NodeRED. Ya que con PICs he trabajado poco mi proyecto de titulación consta de una integración (comunicación serial) entre PIC, Raspberry y NodeRED.</p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>Programación de software y Otros</h3>
+                    <p>En programación de software tengo sólidos conocimientos en Java, buenos conocimientos con matlab y labview, estoy profundizando en C y Nodejs, dispongo de nociones básicas en python. También he trabajado realizando diseño de tarjetas electrónicas (PCB) 
+                        con los software Proteus y Eagle, poseo muy buenos conocimientos programando y realizando Scadas con PLCs. Finalmente laborando con las tarjetas raspberrys ahora estoy comenzando a trabajar con los sistemas operativos linux.</p>
+                </div> <!-- / service -->
+            </div> <!-- / services -->
+            
+            <a href="#work" class="btn">Mi Trabajo</a>
+        </section>
+        
+        
+        <!-- About me -->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Acerca de mí</h2>
+           <p class="section__subtitle section__subtitle--about">Front-end developer que vive en Guayaquil-Ecuador</p>
+           
+           <div class="about-me__body">
+               <p>Actualmente me encuentro realizando mi proyecto de titulación en la carrera de Ingeniería en Electrónica. 
+                Del colegio me gradué como técnico eléctrico, laboré 10 años como técnico eléctrico/electrónico. Desde mis inicio en la universidad me interesó más la parte de programación, por lo que profundice conocimientos más en esa área que en otras, ya sea mediante cursos particulares o ivestigando. 
+            </p>
+
+               <p>Desde el 2019 me introduje en el ámbito de la programación web ya que analizando la situación actual me dí cuenta que era un área con buenas oportunidades de desarrollo, no solo en cuanto al tema laboral si no también personal. En este ámbito poseo conocimientos de HTML, CSS, 
+                JavaScript y en el último año me estoy especializando en el framework de Angular en cuanto al back-end tengo nocion fundamental de NodeJs , Java , Python y he trabajado con MySQL y Firebase.</p>
+           </div>
+           
+           <img src="img/andres_2.png" alt="Jane leaning against a bus" class="about-me__img">
+        </section>
+        
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">Mi Trabajo</h2>
+            <p class="section__subtitle section__subtitle--work">Una muestra de los trabajos que he realizado</p>
+            <p class="section__subtitle section__subtitle--work">En las páginas que les solicitan el user y password para ingresar/ver el contenido usar Email: prueba@mail.com y el Password: 123456</p>
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="https://shopping-cart-angular-andres-cagua.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-01.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 02 -->
+                <a href="https://control-clientes-angular.netlify.app"  target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-02.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 03 -->
+                <a href="https://crud-angular-andres-cagua.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-03.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 04 -->
+                <a href="https://proyecto-presupuesto-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-04.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 05 -->
+                <a href="https://guayaquil-postal-card-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-05.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 06 -->
+                <a href="https://birthday-card-andres-cagua.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-06.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 07 -->
+                <a href="https://unit-converter-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-07.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 08 -->
+                <a href="https://password-genarator-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-08.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 09 -->
+                <a href="https://bmi-calculator-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-09.png" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 0 0-->
+                <a href="https://piano-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-10.png" alt="" class="portfolio__img">
+                </a>
+
+                 <!-- Portfolio item 11-->
+                 <a href="https://tareas-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-11.png" alt="" class="portfolio__img">
+                </a>
+
+                 <!-- Portfolio item 12-->
+                 <a href="https://dados-andres.netlify.app" target="_blank" class="portfolio__item">
+                    <img src="img/portfolio-img-12.png" alt="" class="portfolio__img">
+                </a>
+            </div>
+        </section>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:andrescagua-88@hotmail.com" class="footer__link">andrescagua-88@hotmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/julio-andres-cagua-chiquito-a3680a146/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://bit.ly/3EWrTnO" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://bit.ly/3MMwpXX" target="_blank">
+                        <i class="fab fa-google-drive"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/AndresCagua" target="_blank" >
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://portfolio-andres-cagua-en.netlify.app" target="_blank" >
+                        <i class="fab fa-internet-explorer"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
