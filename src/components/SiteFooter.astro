@@ -1,0 +1,151 @@
+---
+const socials = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/julio-andr%C3%A9s-cagua-chiquito-067712300/',
+    icon: 'linkedin',
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/AndresCagua',
+    icon: 'github',
+  },
+  {
+    label: 'WhatsApp',
+    href: 'https://wa.me/593983105699',
+    icon: 'whatsapp',
+  },
+];
+---
+
+<footer class="section footer" id="contacto">
+  <div class="container">
+    <div class="footer-cta reveal">
+      <span class="mono footer-eyebrow">05 — Contacto</span>
+      <h2 class="footer-title">¿Hablamos?</h2>
+      <a class="email" href="mailto:andrescagua-88@hotmail.com">andrescagua-88@hotmail.com</a>
+
+      <ul class="socials">
+        {
+          socials.map((social) => (
+            <li>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                class="social-link"
+              >
+                {social.icon === 'linkedin' && (
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+                  </svg>
+                )}
+                {social.icon === 'github' && (
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z" />
+                  </svg>
+                )}
+                {social.icon === 'whatsapp' && (
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zm-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88zm8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z" />
+                  </svg>
+                )}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="mono">© 2026 Andrés Cagua · Cuenca, Ecuador · Construido con Astro</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    padding-bottom: clamp(3rem, 8vw, 5rem);
+  }
+
+  .footer-eyebrow {
+    color: var(--accent);
+  }
+
+  .footer-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 9vw, 6rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .email {
+    font-family: var(--font-mono);
+    font-size: clamp(0.95rem, 2.4vw, 1.25rem);
+    color: var(--muted);
+    border-bottom: 1px solid var(--hairline-strong);
+    padding-bottom: 0.25rem;
+    transition:
+      color 0.25s var(--ease-out),
+      border-color 0.25s var(--ease-out);
+  }
+
+  .email:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .socials {
+    display: flex;
+    gap: 0.9rem;
+    margin-top: 0.4rem;
+  }
+
+  .social-link {
+    display: grid;
+    place-items: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 10px;
+    color: var(--muted);
+    background: var(--surface);
+    transition:
+      transform 0.25s var(--ease-out),
+      color 0.25s var(--ease-out),
+      border-color 0.25s var(--ease-out),
+      box-shadow 0.25s var(--ease-out);
+  }
+
+  .social-link:hover {
+    transform: translateY(-4px);
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 8px 26px rgba(198, 241, 53, 0.16);
+  }
+
+  .social-link svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--hairline);
+    padding-top: 1.6rem;
+  }
+
+  .footer-bottom .mono {
+    color: var(--muted);
+    font-size: 0.62rem;
+  }
+</style>
