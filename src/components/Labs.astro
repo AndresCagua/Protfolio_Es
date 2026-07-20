@@ -1,0 +1,100 @@
+---
+const labs = [
+  {
+    title: 'E-commerce Angular + Firebase',
+    href: 'https://shopping-cart-angular-andres-cagua.netlify.app',
+  },
+  {
+    title: 'Control de clientes',
+    href: 'https://control-clientes-angular.netlify.app',
+  },
+  {
+    title: 'CRUD Angular',
+    href: 'https://crud-angular-andres-cagua.netlify.app',
+  },
+];
+---
+
+<section class="section labs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">04 — Archivo</span>
+      <h2 class="section-title labs-title">Labs y proyectos anteriores</h2>
+      <p class="section-sub">Mis primeros proyectos (2020–2021), donde empecé con Angular y Firebase.</p>
+    </div>
+
+    <ul class="labs-list">
+      {
+        labs.map((lab, i) => (
+          <li class="reveal" style={`--reveal-delay: ${i * 90}ms`}>
+            <a href={lab.href} target="_blank" rel="noopener noreferrer" class="lab-link">
+              <span class="lab-title">{lab.title}</span>
+              <span class="mono lab-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .labs {
+    padding-block: clamp(3rem, 8vw, 5rem);
+  }
+
+  .labs-title {
+    font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+  }
+
+  .labs .section-head {
+    margin-bottom: 2rem;
+  }
+
+  .labs-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .lab-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.3rem;
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    background: var(--surface);
+    transition:
+      transform 0.25s var(--ease-out),
+      border-color 0.25s var(--ease-out);
+  }
+
+  .lab-link:hover {
+    transform: translateY(-3px);
+    border-color: rgba(198, 241, 53, 0.45);
+  }
+
+  .lab-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .lab-arrow {
+    color: var(--muted);
+    transition: color 0.2s var(--ease-out);
+  }
+
+  .lab-link:hover .lab-arrow {
+    color: var(--accent);
+  }
+
+  @media (max-width: 760px) {
+    .labs-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,130 @@
+---
+const categories = [
+  {
+    label: 'Lenguajes',
+    items: ['Java', 'C#', 'PHP', 'TypeScript', 'SQL', 'Bash'],
+    span: 2,
+  },
+  {
+    label: 'Frameworks',
+    items: ['Spring Boot', '.NET 8', 'Laravel 12', 'Angular'],
+    span: 1,
+  },
+  {
+    label: 'Bases de datos',
+    items: ['Oracle 12c', 'PostgreSQL', 'SQL Server', 'MySQL', 'MongoDB'],
+    span: 1,
+  },
+  {
+    label: 'Datos',
+    items: ['PL/SQL', 'ETL', 'DWH', 'Particionamiento', 'ODI'],
+    span: 1,
+  },
+  {
+    label: 'DevOps & Cloud',
+    items: ['Docker', 'Azure', 'Linux', 'Git'],
+    span: 1,
+  },
+  {
+    label: 'Integraciones',
+    items: ['Firebase', 'WhatsApp Business API', 'JWT', 'REST APIs'],
+    span: 2,
+  },
+];
+---
+
+<section class="section" id="stack">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="mono">02 — Herramientas</span>
+      <h2 class="section-title">Stack técnico</h2>
+    </div>
+
+    <div class="bento">
+      {
+        categories.map((cat, i) => (
+          <div
+            class:list={['cell', 'reveal', { 'cell-wide': cat.span === 2 }]}
+            style={`--reveal-delay: ${i * 80}ms`}
+          >
+            <span class="mono cell-label">{cat.label}</span>
+            <ul class="cell-items">
+              {cat.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cell {
+    padding: 1.6rem;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    transition:
+      transform 0.3s var(--ease-out),
+      border-color 0.3s var(--ease-out);
+  }
+
+  .cell:hover {
+    transform: translateY(-4px);
+    border-color: rgba(198, 241, 53, 0.45);
+  }
+
+  .cell-wide {
+    grid-column: span 2;
+  }
+
+  .cell-label {
+    display: block;
+    color: var(--accent);
+    font-size: 0.62rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .cell-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.1rem;
+  }
+
+  .cell-items li {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.02rem;
+    color: var(--text);
+  }
+
+  .cell-items li::before {
+    content: '·';
+    color: var(--accent);
+    margin-right: 0.55rem;
+  }
+
+  @media (max-width: 820px) {
+    .bento {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .bento {
+      grid-template-columns: 1fr;
+    }
+
+    .cell-wide {
+      grid-column: span 1;
+    }
+  }
+</style>
