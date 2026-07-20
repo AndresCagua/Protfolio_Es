@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: 'ERP & POS para negocio gastronómico',
     description:
       'Sistema integral de operación para restaurantes: ventas, recetas con explosión de insumos, producción de cocina, caja chica y cuentas por cobrar. API REST con servicio de autenticación JWT desacoplado y aplicación Angular con impresión térmica de tickets.',
-    metrics: '88 endpoints · 18 tablas · 15 módulos',
+    metrics: '87 endpoints · 18 tablas · 15 módulos',
     stack: ['Java 8', 'Spring Boot', 'MySQL', 'JWT', 'Angular 15', 'Docker'],
     //link: { label: 'Ver GitHub', href: 'https://github.com/AndresCagua' },
   },
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     title: 'API de logística nacional',
     description:
       'Backend de la app móvil de operadores para una empresa nacional de mensajería: órdenes de recolección y distribución, trazabilidad de guías, evidencias de entrega y notificaciones push y WhatsApp. Soporta modo offline con sincronización masiva y convive con sistemas legacy.',
-    metrics: '71 endpoints · 28 entidades · workers en segundo plano',
+    metrics: '22 endpoints · workers en segundo plano · 28 entidades',
     stack: ['.NET 8', 'EF Core', 'Azure SQL', 'Firebase', 'WhatsApp Business API', 'Docker'],
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     title: 'Plataforma de gestión deportiva',
     description:
       'Plataforma integral de una federación deportiva nacional: torneos, jugadores, partidos y estadísticas en vivo, más CMS institucional. Persistencia políglota — PostgreSQL transaccional y MongoDB para estadísticas — sincronizada con observers y jobs, con migración histórica de datos en colas.',
-    metrics: '~520 rutas · 73 controladores · 140 modelos',
+    metrics: '293 endpoints · 73 controladores · 140 modelos',
     stack: ['Laravel 12', 'PHP 8.2', 'PostgreSQL', 'MongoDB', 'Swagger', 'Docker'],
   },
   {
