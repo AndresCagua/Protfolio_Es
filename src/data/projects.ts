@@ -11,13 +11,13 @@ export interface Project {
 export const projects: Project[] = [
   {
     number: '01',
-    tag: 'Proyecto propio',
+    tag: 'Confidencial', //'Proyecto propio',
     title: 'ERP & POS para negocio gastronómico',
     description:
       'Sistema integral de operación para restaurantes: ventas, recetas con explosión de insumos, producción de cocina, caja chica y cuentas por cobrar. API REST con servicio de autenticación JWT desacoplado y aplicación Angular con impresión térmica de tickets.',
     metrics: '88 endpoints · 18 tablas · 15 módulos',
     stack: ['Java 8', 'Spring Boot', 'MySQL', 'JWT', 'Angular 15', 'Docker'],
-    link: { label: 'Ver GitHub', href: 'https://github.com/AndresCagua' },
+    //link: { label: 'Ver GitHub', href: 'https://github.com/AndresCagua' },
   },
   {
     number: '02',
