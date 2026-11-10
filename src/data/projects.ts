@@ -5,12 +5,24 @@ export interface Project {
   description: string;
   metrics: string;
   stack: string[];
+  featured?: boolean;
   link?: { label: string; href: string };
 }
 
 export const projects: Project[] = [
   {
     number: '01',
+    tag: 'Proyecto propio',
+    title: 'CholoPay Network',
+    description:
+      'Proyecto insignia en construcción: ecosistema educativo de pagos interoperables 100 % simulado, inspirado en conceptos de Pix sin conectarse a SPI/DICT ni mover dinero real. Define una red central, bancos independientes, CholoKey, ledger de liquidación, API pública, billetera, comercio y pruebas reproducibles, con arquitectura, contratos, amenazas y fases documentadas.',
+    metrics: 'bancos simulados · liquidación por ledger',
+    stack: ['Go', 'Java', 'Spring Boot', 'Node.js', 'TypeScript', 'Flutter', 'PostgreSQL', 'Kafka', 'Docker'],
+    featured: true,
+    link: { label: 'Ver proyecto insignia', href: 'https://github.com/AndresCagua/CholoPay-Network' },
+  },
+  {
+    number: '02',
     tag: 'Proyecto propio',
     title: 'FerrePlus — Sistema de inventario',
     description:
@@ -20,7 +32,7 @@ export const projects: Project[] = [
     link: { label: 'Ver en GitHub', href: 'https://github.com/AndresCagua/FerrePlus' },
   },
   {
-    number: '02',
+    number: '03',
     tag: 'Confidencial',
     title: 'ERP & POS para negocio gastronómico',
     description:
@@ -29,7 +41,7 @@ export const projects: Project[] = [
     stack: ['Java 8', 'Spring Boot', 'MySQL', 'JWT', 'Angular 15', 'Docker'],
   },
   {
-    number: '03',
+    number: '04',
     tag: 'Confidencial',
     title: 'API de logística nacional',
     description:
@@ -38,7 +50,7 @@ export const projects: Project[] = [
     stack: ['.NET 8', 'EF Core', 'Azure SQL', 'Firebase', 'Docker'],
   },
   {
-    number: '04',
+    number: '05',
     tag: 'Confidencial',
     title: 'Plataforma de gestión deportiva',
     description:
@@ -47,12 +59,22 @@ export const projects: Project[] = [
     stack: ['Laravel 12', 'PHP 8.2', 'PostgreSQL', 'MongoDB', 'Swagger', 'Docker'],
   },
   {
-    number: '05',
+    number: '06',
     tag: 'Confidencial',
     title: 'Operaciones de Data Warehouse',
     description:
       'Automatización de las operaciones de un DWH Oracle en producción para un operador nacional de telecomunicaciones: pipelines ETL diarios, watchdogs con reintentos, reconciliación de cargas archivo contra base de datos, gestión de sesiones colgadas y reportería automática.',
     metrics: 'Oracle 12c · PL/SQL avanzado · particionamiento',
     stack: ['Oracle 12c', 'PL/SQL', 'Bash', 'DataStage', 'Linux'],
+  },
+  {
+    number: '07',
+    tag: 'Proyecto propio',
+    title: 'Cardroom — Simulador de validación de tarjetas',
+    description:
+      'Aplicación educativa que valida tarjetas y simula una autorización bancaria sin procesar pagos reales ni almacenar números completos o CVC. Incluye validación Luhn, vencimiento y CVC, token simulado y persistencia de marca, últimos cuatro dígitos, estado y fecha del intento.',
+    metrics: 'API REST · tokenización simulada · datos sintéticos',
+    stack: ['React', 'Vite', '.NET 6', 'PostgreSQL', 'Docker'],
+    link: { label: 'Ver en GitHub', href: 'https://github.com/AndresCagua/simulador_validacion_tarjeta' },
   },
 ];
