@@ -7,6 +7,7 @@ export interface Project {
   stack: string[];
   featured?: boolean;
   link?: { label: string; href: string };
+  video?: { label: string; href: string };
 }
 
 export const projects: Project[] = [
@@ -30,6 +31,10 @@ export const projects: Project[] = [
     metrics: '56 endpoints · 12 entidades · dashboard con reportes',
     stack: ['Java 21', 'Spring Boot 3', 'PostgreSQL', 'JWT', 'Angular 22', 'Docker'],
     link: { label: 'Ver en GitHub', href: 'https://github.com/AndresCagua/FerrePlus' },
+    video: {
+      label: 'Ver video del proyecto',
+      href: 'https://www.youtube.com/playlist?list=PLD8lK0c3tD7E',
+    },
   },
   {
     number: '03',
@@ -76,5 +81,9 @@ export const projects: Project[] = [
     metrics: 'API REST · tokenización simulada · datos sintéticos',
     stack: ['React', 'Vite', '.NET 6', 'PostgreSQL', 'Docker'],
     link: { label: 'Ver en GitHub', href: 'https://github.com/AndresCagua/simulador_validacion_tarjeta' },
+    video: {
+      label: 'Ver video del proyecto',
+      href: 'https://youtu.be/0OYDvf6JylE',
+    },
   },
 ];

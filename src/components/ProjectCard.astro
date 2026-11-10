@@ -32,18 +32,38 @@ const { project } = Astro.props;
     {project.stack.map((tech) => <li class="mono pill">{tech}</li>)}
   </ul>
 
-  {
-    project.link && (
-      <a
-        class="mono card-link"
-        href={project.link.href}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {project.link.label} <span aria-hidden="true">→</span>
-      </a>
-    )
-  }
+  <div class="card-actions">
+    {
+      project.link && (
+        <a
+          class="mono card-link"
+          href={project.link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {project.link.label} <span aria-hidden="true">→</span>
+        </a>
+      )
+    }
+    {
+      project.video && (
+        <a
+          class="mono card-link video-link"
+          href={project.video.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={project.video.label}
+          title={project.video.label}
+        >
+          <svg class="youtube-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8Z" />
+            <path class="youtube-play" d="m9.75 15.5 5.75-3.5-5.75-3.5v7Z" />
+          </svg>
+          <span>{project.video.label}</span>
+        </a>
+      )
+    }
+  </div>
 </article>
 
 <style>
@@ -165,7 +185,17 @@ const { project } = Astro.props;
     border-color: var(--hairline-strong);
   }
 
+  .card-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
   .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
     color: var(--text);
     font-size: 0.7rem;
     width: fit-content;
@@ -174,5 +204,21 @@ const { project } = Astro.props;
 
   .card-link:hover {
     color: var(--accent);
+  }
+
+  .youtube-icon {
+    width: 1.05rem;
+    height: 1.05rem;
+    fill: #ff0033;
+    transition: transform 0.2s var(--ease-out), fill 0.2s var(--ease-out);
+  }
+
+  .video-link:hover .youtube-icon {
+    fill: #ff4968;
+    transform: scale(1.12);
+  }
+
+  .youtube-play {
+    fill: white;
   }
 </style>
